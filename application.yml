@@ -8,9 +8,9 @@ spring:
   datasource:
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/takeout?useSSL=false&useUnicode=ture&characterEncoding=utf8&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true
-      username: root
-      password: loveUforever1107
+      url: jdbc:mysql://localhost:3306/database-nameuseSSL=false&useUnicode=ture&characterEncoding=utf8&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true
+      username: username
+      password: password
 
 mybatis-plus:
   global-config:
@@ -25,4 +25,4 @@ mybatis-plus:
 
 up-and-down-file:
   #  这里是上传文件的基本路径
-  path: D:\coding\java\codes\springboot_projects\p1_takeout\images\dish-and-combo\
+  path: basic-path
