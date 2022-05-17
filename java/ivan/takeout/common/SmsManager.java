@@ -11,25 +11,20 @@ import java.util.List;
  * @author Maximilian_Li
  */
 public class SmsManager {
-    public static String signName = "阿里云短信测试";
-    public static String templateCode = "SMS_154950909";
+    public static String signName = "***";
+    public static String templateCode = "***";
 
     public static List<String> validatePhoneNums = new ArrayList<>();
 
     static {
-        validatePhoneNums.add("18222634694");
-        validatePhoneNums.add("13110039536");
+        validatePhoneNums.add("***");
+        validatePhoneNums.add("***");
     }
 
-    /**
-     * 用户登录名称: p1_takeout@1170049073622320.onaliyun.com
-     * AccessKey ID: LTAI5tQhG5MQoWt6Rm42mEzK
-     * AccessKey Secret: CEfsMRsPbXojOWTgitZqAVUn4M2rb1
-     */
     public static void sendMessage(String phoneNum, String param) throws Exception {
         Client client = createClient(
-                "LTAI5tQhG5MQoWt6Rm42mEzK",
-                "CEfsMRsPbXojOWTgitZqAVUn4M2rb1");
+                "***",
+                "***");
 
         SendSmsRequest sendSmsRequest = new SendSmsRequest();
         boolean isIn = validatePhoneNums.contains(phoneNum);
