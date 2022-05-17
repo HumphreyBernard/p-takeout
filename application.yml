@@ -8,7 +8,7 @@ spring:
   datasource:
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/database-nameuseSSL=false&useUnicode=ture&characterEncoding=utf8&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true
+      url: jdbc:mysql://localhost:3306/database-name?useSSL=false&useUnicode=ture&characterEncoding=utf8&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true
       username: username
       password: password
 
