@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 接口全类名 -->
+<mapper namespace="ivan.takeout.mapper.CategoryMapper">
+
+    <!-- ************************************************************************************** -->
+
+    <!-- Category selectInDeleted(@Param("cat") String cName); -->
+    <select id="selectInDeleted" resultType="category">
+        select *
+        from category
+        where name = #{cat}
+          and is_deleted = 1
+    </select>
+
+    <!-- ************************************************************************************** -->
+
+    <!-- void updateLogicDeleted(@Param("identifier") Long id); -->
+    <update id="updateLogicDeleted">
+        update category
+        set is_deleted = 0
+        where id = #{identifier}
+    </update>
+
+    <!-- ************************************************************************************** -->
+
+
+</mapper>

@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    # 应用名称
+    name: takeout
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/takeout?useSSL=false&useUnicode=ture&characterEncoding=utf8&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true
+      username: root
+      password: loveUforever1107
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: assign_id
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+  type-aliases-package: ivan.takeout.entity
+  mapper-locations: classpath*:ivan/takeout/mapper/**/*.xml
+
+
+up-and-down-file:
+  #  这里是上传文件的基本路径
+  path: D:\coding\java\codes\springboot_projects\p1_takeout\images\dish-and-combo\
